@@ -1,0 +1,59 @@
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh; 
+}
+
+main{
+    background-color: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    margin: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+h2{
+    text-align: center;
+    padding: 8px;
+    
+}
+
+.form {
+    display: grid;
+    place-items: center;
+    height: auto;
+    margin: auto;
+    padding: 8px;
+    
+    
+}
+
+.listarClientes{
+    place-items: center;
+    padding: 8px;
+}
+
+input{
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+
+
+button[type="submit"]{
+    background-color: #33cc33;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px;
+}
+button.listarClientes{
+    background-color: #e60000;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}

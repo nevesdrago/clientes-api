@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h2>Lista de Clientes</h2>
+        <form method="get"" class="form">
+            <div class="form">
+                <label for="name">Digite o nome do cliente: </label>
+                <input type="text" name="name" id="name" placeholder="Nome" required>
+            </div>
+
+            <div class="form">
+                <label for="email">Digite o e-mail do cliente:</label>
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+            </div>
+
+            <div class="form">
+                <button type="submit" id="btnAdicionar" onclick="cadastrarUsuario()">Adicionar</button>
+            </div>
+        </form>
+
+        <div class="listarClientes">
+            <ul id="listaClientes">
+                <li>Clientes <button class="listarClientes">X</button></li>
+            </ul>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
