@@ -14,9 +14,43 @@ document.addEventListener("DOMContentLoaded", () =>  {
                 li.textContent = `Nome: ${item.nome} - Email: ${item.email}`
                 // Adiciona a lista ao elemento pai
                 clientesUl.appendChild(li);
+
+                // Criação do elemento botão
+                const btn = document.createElement("button");
+                // Define o estilo do botão
+                btn.style.backgroundColor = "#ff0000"
+                btn.style.padding = "8px"
+                btn.style.margin = "8px"
+                // Define o texto do botão para X
+                btn.textContent = "X";
+                // Adiciona um listener de evento que faz um fetch no endpoint e remove os usuários
+                btn.addEventListener("click", () =>{
+                    fetch(`https://crudcrud.com/api/9843cb2768ee4eb6bb727a584faf9d39/clientes/${item._id}`, {
+                        method: "DELETE",
+                        headers: {
+                            "Content-type": "application/json"
+                        }
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            console.log("Recurso deletado com sucesso!");
+                            li.remove();
+
+                        }
+                        else {
+                            console.log("Falha ao deletar recurso.")
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Erro:", error);
+                    });
+                });
+                // Adiciona o elemento botão ao li
+                li.appendChild(btn)
             });
             // Adiciona o elemento pai com a lista ao HTML
             document.getElementById("listarClientes").appendChild(clientesUl);
+            
 
     })
     .catch(error => {
